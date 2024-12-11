@@ -21,7 +21,7 @@ create the linear regression model and fit
 print the predicted output
 
 ## Program:
-```
+``` python
 import pandas as pd
 from sklearn import linear_model
 df = pd.read_csv("carsemission.csv")
@@ -30,17 +30,19 @@ y = df['CO2']
 regr = linear_model.LinearRegression()
 regr.fit(X, y)
 print('Coefficients:', regr.coef_)
-print('Intercept:',regr.intercept_)
-predictedCO2 = regr.predict([[3300, 1300]])
-print('Predicted CO2 for the corresponding weight and volume',predictedCO2)
-
+print('Intercept:', regr.intercept_)
+input_data = pd.DataFrame({'Weight': [3300], 'Volume': [1300]})
+predictedCO2 = regr.predict(input_data)
+print('Predicted CO2 for the corresponding weight and volume:', predictedCO2)
 
 ```
 ## Output:
 
 ### Insert your output
 
-![ex 10](https://github.com/user-attachments/assets/868b6eea-cc41-4c63-ad9d-4f06627a9477)
+![Screenshot 2024-12-11 211750](https://github.com/user-attachments/assets/e3fb5f54-b1e3-4383-a53b-ba7ec2cc7cfe)
+
+
 
 
 ## Result
